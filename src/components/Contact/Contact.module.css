@@ -1,0 +1,17 @@
+.contactItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  max-width: 375px;
+}
+.contactItem p {
+  margin-left: 10px;
+}
+.contactInf {
+  display: flex;
+  align-items: center;
+}
