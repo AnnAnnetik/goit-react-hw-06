@@ -6,11 +6,11 @@ export const INITIAL_STATE = {
 
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: INITIAL_STATE,
+  initialState: INITIAL_STATE.contacts,
   reducers: {
     addContact: (state, action) => {
       const { name, number } = action.payload;
-      state.contacts.items.push({
+      state.items.push({
         id: nanoid(),
         name,
         number,
@@ -26,5 +26,5 @@ const contactsSlice = createSlice({
 });
 
 export const { addContact, deleteContact } = contactsSlice.actions;
-
+export const selectContacts = state => state.contacts.items;
 export default contactsSlice.reducer;
