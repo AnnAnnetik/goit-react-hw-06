@@ -17,10 +17,10 @@ const contactsSlice = createSlice({
       });
     },
     deleteContact(state, action) {
-      const contactIndex = state.contacts.items.findIndex(
+      const contactIndex = state.items.findIndex(
         contact => contact.id === action.payload
       );
-      state.contacts.items.splice(contactIndex, 1);
+      state.items.splice(contactIndex, 1);
     },
   },
 });
